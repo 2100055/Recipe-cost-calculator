@@ -3,7 +3,7 @@
 
 # ensure answer is not blank 
 
-def not_blank(name):  
+def not_blank(name):
 
     while True:
 
@@ -13,49 +13,46 @@ def not_blank(name):
             print("Sorry, you cannot leave this space blank... please try again")
 
         else:
-            return response    
-           
+            return response
 
-# ask user for serving size 
+# ask user for serving size
 
 def number_checker(recipe):
 
+ while True:
+     try:
 
-    while True:
-            
-        try:
-
-            serving = int(input(recipe)) 
+            serving = int(input(recipe))
             return serving
-        
-        except ValueError:
-           
-            print("Please enter a valid serving size") 
 
+     except ValueError:
 
+            print("Please enter a valid serving size")
 
 # main code goes here
 
-#ask user for recipe name
+# ask user for recipe name
 
 recipe_name = not_blank("Please enter recipe name: ")
+
 
 if recipe_name == not_blank:
     print("mmm, yummy")
 
 # ask user for serving size
 
-serving_size = number_checker (" How many servings does you're recipe have? (Please enter a numerical value):  ")
+serving_size = number_checker ("How many servings does you're recipe have? (Please enter a numerical value):  ")
 
-if 2 <= serving_size <= 20:
+if 1 <= serving_size <= 30:
     pass
 
-elif serving_size <2:
-    print("You're recipe has very few servings")
+elif serving_size <1:
+    print("??... Are you sure this isn't a typo? ")
 
 
 else:
-    print("??... Are you sure this isn't a typo")  
+    print("??... Are you sure this isn't a typo? ")  
+
 
 #ask user for ingredients and amounts
 
@@ -74,21 +71,16 @@ while True:
     if  10<= cost <= 150:
         pass
 
-    elif cost <10:
-       print("you're recipe is very cheap")
+    elif cost <1:
+       print("Woah! score! ")
 
     else:
-      print("??... Are you sure this isn't a typo")  
-
+      print("??... Are you sure this isn't a typo? ") 
 
 #Find the cost of ingredients per serving
+    while True:
 
-    total_cost = cost
-    serving = serving_size
+     total_cost = cost
+     serving = serving_size
 
-    print(" You have {} servings with a total cost of {} which means each serving costs {} ".format(serving, total_cost, total_cost / serving))
-
-
-
-
-   
+     print(" You have {} servings with a total cost of {} which means each serving costs {} ".format(serving, total_cost, total_cost / serving))
