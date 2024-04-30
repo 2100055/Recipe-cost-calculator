@@ -41,46 +41,51 @@ if recipe_name == not_blank:
 
 # ask user for serving size
 
-serving_size = number_checker ("How many servings does you're recipe have? (Please enter a numerical value):  ")
+while True:
 
-if 1 <= serving_size <= 30:
+  serving_size = number_checker ("How many servings does you're recipe have? (Please enter a numerical value):  ")
+
+  if 2<= serving_size <= 50:
     pass
 
-elif serving_size <1:
-    print("??... Are you sure this isn't a typo? ")
+  elif serving_size <1:
+        print("??... Are you sure this isn't a typo? ")
+        continue
 
-
-else:
-    print("??... Are you sure this isn't a typo? ")  
+  else:
+        print("??... Are you sure this isn't a typo? ")
+        continue
 
 
 #ask user for ingredients and amounts
 
-while True:
- ingredient_amount = not_blank("Please list you're ingredients and the amount of each is needed for you're recipe: ")
+  while True:
+     ingredient_amount = not_blank("Please list you're ingredients and amount needed (eg. 1 cup of flour, 2tsps milk ect.): ")
  
- print("Looks good!")
+     print("Looks good!")
 
  #Ask user for total cost of ingredients
 
 
- while True:
+     while True:
 
-    cost = number_checker (" What is the total cost of ingredients for your recipe? (Enter number without $$): ")  
+        cost = number_checker (" What is the total cost of ingredients for your recipe? (Enter number without $$): ")  
 
-    if  10<= cost <= 150:
-        pass
+        if  10<= cost <= 150:
+          pass
 
-    elif cost <1:
-       print("Woah! score! ")
+        elif cost <1:
+            print("Please enter a valid total cost ")
+            continue
 
-    else:
-      print("??... Are you sure this isn't a typo? ") 
+        else:
+         print("??... Are you sure this isn't a typo? ")
+         continue
 
 #Find the cost of ingredients per serving
-    while True:
+        while True:
 
-     total_cost = cost
-     serving = serving_size
+         total_cost = cost
+         serving = serving_size
 
-     print(" You have {} servings with a total cost of {} which means each serving costs {} ".format(serving, total_cost, total_cost / serving))
+         print(" You have {} servings with a total cost of {} which means each serving costs {} ".format(serving, total_cost, total_cost / serving))
