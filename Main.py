@@ -53,7 +53,7 @@ while True:
         continue
 
   else:
-        print("??... Are you sure this isn't a typo? ")
+        print("This seems unlikely... please check again ")
         continue
 
 
@@ -79,7 +79,7 @@ while True:
             continue
 
         else:
-         print("??... Are you sure this isn't a typo? ")
+         print("This seems unlikely... please check again")
          continue
 
 #Find the cost of ingredients per serving

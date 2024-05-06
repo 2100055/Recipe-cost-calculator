@@ -2,7 +2,7 @@
 
 # ask user for serving size 
 
-def serving_size(recipe):
+def number_checker(recipe):
 
     while True:
             
@@ -16,8 +16,18 @@ def serving_size(recipe):
             print("Please enter a valid serving size")
 
 # Main code goes here
-
 while True:
 
-    serving = serving_size (" How many servings does you're recipe have?: ") 
-   
+
+   serving_size = number_checker ("How many servings does you're recipe have? (Please enter a numerical value):  ")
+
+   if 1 <= serving_size <= 50:
+       pass
+
+   elif serving_size <1:
+    print("??... Are you sure this isn't a typo? ")
+    continue
+
+
+   else:
+    print("This seems unlikely... please check again ")  

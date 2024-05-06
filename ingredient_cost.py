@@ -5,7 +5,7 @@
 def number_checker(recipe):
 
 
-    while True:
+  while True:
             
         try:
 
@@ -18,18 +18,19 @@ def number_checker(recipe):
 
 
 # Main code goes here
-
 while True:
 
-    cost = number_checker (" What is the total cost of ingredients for your recipe? (Enter number without $$): ")  
+        cost = number_checker (" What is the total cost of ingredients for your recipe? (Enter number without $$): ")  
 
-    if  10<= cost <= 150:
-        pass
+        if  10<= cost <= 150:
+          pass
 
-    elif cost <10:
-       print("you're recipe is very cheap")
+        elif cost <1:
+            print("Please enter a valid total cost ")
+            continue
 
-    else:
-      print("??... Are you sure this isn't a typo")  
+        elif cost >= 150: 
+         print("??... Are you sure this isn't a typo? ")
+         continue
     
                 
