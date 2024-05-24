@@ -1,4 +1,4 @@
-# functions go here
+# Functions go here
 
 def not_blank(name):
 
@@ -13,7 +13,7 @@ def not_blank(name):
         else:
             return response
 
-# ask user for serving size
+# Ask user for serving size
 
 def number_checker(recipe):
 
@@ -29,16 +29,16 @@ def number_checker(recipe):
 
       print("Please enter a valid serving size")
 
-# main code goes here
+# Main code goes here
 
-# ask user for recipe name
+# Ask user for recipe name
 
 recipe_name = not_blank("Please enter recipe name: ")
 
 if recipe_name == not_blank:
     print("mmm, yummy")
 
-# ask user for serving size
+# Ask user for serving size
 
 while True:
 
@@ -56,7 +56,7 @@ while True:
     continue
 
 
-# ask user for ingredients and amounts
+# Ask user for ingredients and amounts
 
   while True:
      ingredient_amount = not_blank("Please list you're ingredients and amount needed (eg. 1 cup of flour, 2tsps milk ect.): ")
@@ -76,14 +76,24 @@ while True:
             print("Please enter a valid total cost ")
             continue
 
-        elif cost >= 150:
+        else:
+         
          print("This seems unlikely... please check again")
          continue
 
+        print("nice!")
+        
+
 # Find the cost of ingredients per serving
         while True:
+          
 
          total_cost = cost
          serving = serving_size
 
          print(" You have {} servings with a total cost of {} which means each serving costs {} ".format(serving, total_cost, total_cost / serving))
+        
+         break
+         
+
+         
