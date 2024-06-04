@@ -59,7 +59,7 @@ while True:
 # Ask user for ingredients and amounts
 
   while True:
-     ingredient_amount = not_blank("Please list you're ingredients and amount needed (eg. 1 cup of flour, 2tsps milk ect.): ")
+     ingredient_amount = not_blank("List ingredients and amount needed (eg. 1 cup of flour, 2tsps milk ect.): ")
 
      print("Looks good!")
 
@@ -67,7 +67,7 @@ while True:
 
      while True:
 
-        cost = number_checker(" What is the total cost of ingredients for your recipe? (Enter number without $$): ")
+        cost = number_checker(" Enter the total cost of ingredients for your recipe? (Enter number without $$): ")
 
         if 10 <= cost <= 150:
           pass
@@ -82,6 +82,7 @@ while True:
          continue
 
         print("nice!")
+        break
         
 
 # Find the cost of ingredients per serving
