@@ -27,7 +27,7 @@ def not_blank(name):
 # Ask user for serving size
 
 def number_checker(recipe):
-  """Make sure the response is am integer.
+  """Make sure the response is an integer.
 
     This is a function that ensures the users answer
     is an integer by using try: and ValueError statements
