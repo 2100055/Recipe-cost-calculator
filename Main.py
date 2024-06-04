@@ -1,8 +1,19 @@
 # Functions go here
 
 def not_blank(name):
+    """Make sure the response is not blank.
 
-    """ Make sure the answer is not blank."""
+    This is a function that ensures the users answer
+    is not blank by using if and else statements
+
+    Args:
+       not_blank(name): response = input(name)
+
+    Returns:
+       if response == "":
+             print("you cannot leave this space blank... please try again")
+       return response
+   """
 
     while True:
         response = input(name)
@@ -16,16 +27,25 @@ def not_blank(name):
 # Ask user for serving size
 
 def number_checker(recipe):
+  """Make sure the response is am integer.
 
- """ Make sure the user uses an integer."""
+    This is a function that ensures the users answer
+    is an integer by using try: and ValueError statements
 
- while True:
-    try:
+    Args:
+       number_checker(recipe): serving = int(input(recipe))
 
-        serving = int(input(recipe))
-        return serving
+    Returns:
+       "Please enter a valid serving size"
+   """
 
-    except ValueError:
+  while True:
+   try:
+
+    serving = int(input(recipe))
+    return serving
+
+   except ValueError:
 
       print("Please enter a valid serving size")
 
@@ -42,7 +62,7 @@ if recipe_name == not_blank:
 
 while True:
 
-  serving_size = number_checker("How many servings does you're recipe have? (Please enter a numerical value):  ")
+  serving_size = number_checker("What is your recipe serving size? (Please enter a numerical value):  ")
 
   if 2 <= serving_size <= 50:
     pass
@@ -77,24 +97,20 @@ while True:
             continue
 
         else:
-         
+
          print("This seems unlikely... please check again")
          continue
 
         print("nice!")
-        break
+        
         
 
 # Find the cost of ingredients per serving
         while True:
-          
 
          total_cost = cost
          serving = serving_size
 
          print(" You have {} servings with a total cost of {} which means each serving costs {} ".format(serving, total_cost, total_cost / serving))
-        
-         break
-         
 
-         
+         break
